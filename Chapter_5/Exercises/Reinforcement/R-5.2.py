@@ -1,6 +1,5 @@
 """
-Exexute the experiment from Code Fragment 5.1
-and compare the results on your system to those we report in Code Fragment 5.2
+Redesign the experiment so that the program outputs only those values of k at which the existing capacity is exhausted.
 """
 
 # Code Fragment 5.1
