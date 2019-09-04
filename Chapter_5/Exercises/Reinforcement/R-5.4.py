@@ -55,6 +55,7 @@ class DynamicArray:
         """Return new array with capacity c."""
         return (c * ctypes.py_object)()
 
+
 def main():
     array = DynamicArray()
     array.append(1)
