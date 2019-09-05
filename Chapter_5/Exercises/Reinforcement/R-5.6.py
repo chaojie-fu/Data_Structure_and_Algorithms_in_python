@@ -1,7 +1,10 @@
 import ctypes
 """
-Our DynamicArray class, as given in Code Fragment 5.3, does not support use of negative indices with __getitem__.
-Update that method to better match the semantics of a Python list.
+Our implementation of insert for the DynamicArray class, as given in Code Fragment 5.5, has the following inefficiency.
+In the case when a resize occurs, the resize operation takes time to copy all the elements from an old array to a array,
+and then the subsequent loop in the body of insert shifts many of those elements. Give an improved implementation of the
+insert method, so that, in the case of a resize, the elements are shifted into their final position during that
+operation, thereby avoiding the subsequent shifting.
 """
 
 
@@ -44,6 +47,16 @@ class DynamicArray:
         self._A[self._n] = obj
         self._n += 1
 
+    # Original version of function _resize
+    # def _resize(self, c):
+    #     """Resize internal array to capacity c."""
+    #     B = self._make_array(c)
+    #     for k in range(self._n):
+    #         B[k] = self._A[k]
+    #     self._A = B
+    #     self._capacity = c
+
+    # Refined version of function _resize
     def _resize(self, c):
         """Resize internal array to capacity c."""
         B = self._make_array(c)
