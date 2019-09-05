@@ -56,6 +56,7 @@ class DynamicArray:
     #     self._A = B
     #     self._capacity = c
 
+
     # Refined version of function _resize
     def _resize(self, c):
         """Resize internal array to capacity c."""
