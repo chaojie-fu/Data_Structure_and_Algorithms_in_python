@@ -2,6 +2,8 @@
 5.5.3 Simple Cryptography
 Page 216
 """
+
+
 class CaesarCipher:
     def __init__(self, shift):
         self._shift = shift
